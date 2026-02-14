@@ -1,0 +1,140 @@
+*{
+    box-sizing:border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #FFF8E7, #FADADD);
+}
+
+/* sCREEN */
+.screen {
+    display: none;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.screen.active {
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* CARD LAYOUT */
+.card {
+    background: white;
+    border-radius: 18px;
+    padding: 25px;
+    width:100%;
+    max-width:420px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+/*INPUTS*/
+input{
+    width:100%;
+    padding: 14px;
+    margin: 10px 0;
+    border-radius:12px;
+    border:1px solid #ddd;
+    font-size:14px;
+}
+
+button{
+    width:100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+        background: #DDEEFF;
+        font-weight: bold;
+        cursor: pointer;
+}/* DASHBOARD GRID */
+.profiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.profile-card {
+    background: white;
+    padding: 15px;
+    border-radius: 16px;
+    text-align: left;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.profile-card:hover {
+    transform: translateY(-5px);
+}
+
+/* CHAT */
+.chat-box {
+    width: 100%;
+    max-width: 500px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages {
+    flex: 1;
+    overflow-y: auto;
+    margin: 10px 0;
+    padding: 10px;
+    background: #fafafa;
+    border-radius: 12px;
+}
+
+.msg-input {
+    display: flex;
+    gap: 10px;
+}
+
+.msg-input input {
+    flex: 1;
+}
+
+/* QUICK BUTTONS */
+.quick-msg {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.quick-msg button {
+    width: auto;
+    flex: 1;
+}
+
+/* MATCH BOX */
+.match-box {
+    margin-top: 15px;
+    background: #FADADD;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* 📱 MOBILE ADJUSTMENTS */
+@media (max-width: 600px) {
+
+    .card {
+        padding: 20px;
+    }
+
+    .chat-box {
+        height: 95vh;
+    }
+
+    .profiles {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Comfort Connect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!--  LOGIN SCREEN -->
+    <section id="loginScreen" class="screen active">
+        <div class="card auth-box">
+            <h2> Comfort Connect 💫</h2>
+            <input type="email" id="email" placeholder="Company Email">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Enter</button>
+            <p>No pressure. Just comfort.</p>
+        </div>
+    </section>
+
+    <!--  DASHBOARD SCREEN -->
+    <section id="dashboardScreen" class="screen">
+        <div style="width:100%; text-align:center;">
+            <h2>People You May Feel Comfortable With</h2>
+            <div id="profilesContainer" class="profiles"></div>
+            <div id="matchBox" class="match-box"></div>
+        </div>
+    </section>
+    <!--  CHAT SCREEN -->
+    <section id="chatScreen" class="screen">
+        <div class="chat-box card">
+            <div class="chat-header">
+                <button onclick="goDashboard()">⬅</button>
+                <h3>Shy Chat</h3>
+            </div>
+
+            <div id="messages" class="messages"></div>
+
+            <div class="quick-msg">
+                <button onclick="sendQuickMsg('Hi… I also don’t talk much 😅')">Soft Hi</button>
+                <button onclick="sendQuickMsg('Coffee break partner? ☕')">Coffee</button>
+            </div>
+
+            <div class="msg-input">
+                <input type="text" id="messageInput" placeholder="Type slowly... no rush">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🛠 ADMIN SCREEN -->
+    <section id="adminScreen" class="screen">
+        <h2>Admin Dashboard</h2>
+    
+        <div class="admin-tabs">
+            <button onclick="loadUsers()">Users</button>
+            <button onclick="loadMatches()">Matches</button>
+        </div>
+    
+        <div id="adminContent"></div>
+    
+        <button onclick="logout()">Logout</button>
+    </section>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
